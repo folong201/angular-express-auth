@@ -1,0 +1,28 @@
+<nav>
+  <a routerLink="/home">Home</a>
+  <a routerLink="/about">About</a>
+  <a routerLink="/contact">Contact</a>
+
+  <a routerLink="/login" *ngIf="!isAuth">Login</a>
+  <a routerLink="/register" *ngIf="!isAuth">Register</a>
+  <button *ngIf="isAuth" (click)="logout()">LogOUt</button>
+</nav>
+<style>
+  nav {
+    background: #333;
+    color: #fff;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  nav a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+  }
+</style>

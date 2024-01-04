@@ -1,0 +1,54 @@
+<p>register works!</p>
+<div class="logincontainer">
+  <form (ngSubmit)="register()" [formGroup]="registerForm">
+    <div class="form-group">
+      <label for="name">UserName</label>
+      <input type="text" class="form-control" id="username" formControlName="name">
+    </div>
+    <div class="form-group">
+      <label for="email">Email address:</label>
+      <input type="email" class="form-control" id="email" formControlName="email">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" formControlName="password">
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox"> Remember me</label>
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
+<style>
+  .logincontainer {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  input {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+
+  }
+
+  .form-group {
+    width: 100%;
+  }
+
+  .btn-default {
+    width: 100%;
+
+  }
+
+  .checkbox {
+    width: 100%;
+  }
+
+  .logincontainer form {
+    width: 100%;
+  }
+</style>
